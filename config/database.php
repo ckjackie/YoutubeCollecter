@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('postgres://xmkyhqranirvof:04c8efdf3a714ce27bfb2f31a92b6eec3ff6efb46cec4a3c175c07b6058fcf14@ec2-34-236-87-247.compute-1.amazonaws.com:5432/de12qhba8llif3', 'pgsql'),
+   'default' => env('DB_CONNECTION', 'mysql'),
 
     /*
     |--------------------------------------------------------------------------
