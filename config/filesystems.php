@@ -13,7 +13,8 @@ return [
     |
     */
 
-    'default' => env('FILESYSTEM_DRIVER', 'local'),
+    //'default' => env('FILESYSTEM_DRIVER', 'local'),
+    'default' => env('postgres://aopojvmdyogngp:7e60f44961a635b2d4da3ad98c69aef2c4bfafe97ae7da35df1d1e80796ffb83@ec2-54-162-211-113.compute-1.amazonaws.com:5432/d9r03saekl029g', 'pgsql'),
 
     /*
     |--------------------------------------------------------------------------
