@@ -11,7 +11,6 @@ class VideoController extends Controller
 {
      public function index(){
      	$data = Video::all();
-        //$user = Auth::user();
         return view("index", compact("data"));
     }
 

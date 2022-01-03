@@ -28,12 +28,13 @@
         @endauth
 
         <table class="table table-striped">
-            <tr><td>標題</td><td>Video id</td>
+            <tr><td>清單名稱</td><td>標題</td><td>VID</td>
                 @auth
                 <td>管理</td></tr>
                 @endauth
             @foreach($data as $item)
             <tr>
+                <td>{{ $item->video_list_id }}</td>
                 <td><a href="/show/{{ $item->id }}/">{{ $item->title }}</a></td>
                 <td>{{ $item->vid }}</td>
                 @auth

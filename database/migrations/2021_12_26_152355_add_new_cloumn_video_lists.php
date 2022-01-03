@@ -14,7 +14,7 @@ class AddNewCloumnVideoLists extends Migration
      public function up()
     {
         Schema::table('video_lists', function (Blueprint $table) {
-          $table->integer('video_id')->nullable();
+          $table->integer('user_id')->nullable();
         });
     }
 

@@ -11,16 +11,20 @@ class VideoList extends Model
     protected $fillable = [
         'name',
         'count',
+        'user_id',
     ];
 
     //2021.12.29 Relationships
-    public function Videos()
+    public function videos()
     {
         return $this->hasMany('App\Video');
     }
 
-    public function VideoLists()
+    
+    public function videolists()
     {
-        return $this->belongsTo('App\VideoList');
+        return $this->belongsTo('App\User');
     }
+    
 }
+

@@ -15,6 +15,7 @@ class AddNewCloumnVideos extends Migration
     {
         Schema::table('videos', function (Blueprint $table) {
           $table->integer('comment_id')->nullable();
+          $table->integer('video_list_id')->nullable();
         });
     }
 

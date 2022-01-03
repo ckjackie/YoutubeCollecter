@@ -8,9 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Comment extends Model
 {
     use HasFactory;
-
-     public function Video()
-    {
-        return $this->belongsTo('App\Viedo');
-    }
 }
+
+
+

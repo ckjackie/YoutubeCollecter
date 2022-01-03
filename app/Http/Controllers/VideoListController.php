@@ -23,10 +23,18 @@ class VideoListController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function add(Request $req)
     {
-        //
+        $videolist = new VideoList;
+        $videolist->name = $req->name;
+        $videolist->count = $req->count;
+        $videolist->user_id = $req->user_id;
+        $videolist->save();
+        return redirect("/videolist/");
     }
+
+
+
 
     /**
      * Store a newly created resource in storage.
