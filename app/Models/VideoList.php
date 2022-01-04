@@ -14,7 +14,6 @@ class VideoList extends Model
         'user_id',
     ];
 
-    //2021.12.29 Relationships
     public function videos()
     {
         return $this->hasMany('App\Video');

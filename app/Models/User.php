@@ -11,7 +11,7 @@ use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Database\Eloquent\Model;
 
-/*2021.12.29 Relationships
+/*
 class User extends Model
 {
     public function videolists()

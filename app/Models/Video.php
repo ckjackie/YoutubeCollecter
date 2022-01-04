@@ -14,4 +14,5 @@ class Video extends Model
     {
         return $this->hasMany('App\Comment');
     }
+
 }

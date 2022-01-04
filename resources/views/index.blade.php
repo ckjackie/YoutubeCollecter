@@ -9,7 +9,7 @@
 @endsection
 
 @section("maincontent")
-<h2>我的影音列表</h2>
+<h2>影音列表</h2>
     @if(Auth::user())
         {{ Auth::user()->email }}
     @else
@@ -21,8 +21,8 @@
         @auth
         <form action="/add/" method="POST">
             @csrf
-            標題：<input type="text" name="title" size=20 required>
             VID:<input type="text" name="vid" size=20 required>
+            清單:<input type="text" name="vid" size=20 required>
             <input type=submit value="加入">
         </form>
         @endauth
