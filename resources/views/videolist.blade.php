@@ -12,15 +12,14 @@
         <form action="/videolist/" method="POST">
             @csrf
             @auth
-            使用者ID：<input type="text" name="user_id" size=20 value={{Auth::user()->id}} >
+            使用者：<input type="text" name="user_id" size=20 value={{Auth::user()->id}} >
             @endauth
             清單名稱：<input type="text" name="name" size=20 required>
-            啟始計數:<input type="text" name="count" size=20 value=0 required>
             <input type=submit value="加入">
         </form>
         <hr>
 	@forelse ($videolist as $item)
-    	<li><a href="/videolist/list/{{ $item->id }}">{{ $item->name }}</a></li>
+    	<li>{{ $item->name }}</li>
 	@empty
     	<p>目前沒有影片清單</p>
 	@endforelse

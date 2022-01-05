@@ -50,6 +50,7 @@ Route::middleware(['auth'])->group(function () {
 //要驗證才能訪問的路由
 	Route::get('/show/{id}/', [VideoController::class, 'show']);
 	Route::post('/add', [VideoController::class, 'add']);
+	Route::post('/addcom/{id}/', [VideoController::class, 'addcom']);
 	Route::get('/delete/{id}/', [VideoController::class, 'delete']);
 });
 

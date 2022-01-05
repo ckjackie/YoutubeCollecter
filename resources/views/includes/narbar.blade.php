@@ -16,7 +16,7 @@
           <a class="nav-link active" aria-current="page" href="/">首頁</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="videolist">影片清單</a>
+          <a class="nav-link" href="/videolist">影片清單</a>
         </li>
 
 

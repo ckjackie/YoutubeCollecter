@@ -9,11 +9,12 @@
 @endsection
 
 @section("maincontent")
-<h2>影音列表</h2>
     @if(Auth::user())
-        {{ Auth::user()->email }}
+        <br>
+        <h5>影音列表-{{ Auth::user()->email }}</h5>
     @else
-        訪客
+        <br>
+        <h5>影音列表-訪客</h5>
     @endif
 
         <hr>
@@ -21,21 +22,19 @@
         @auth
         <form action="/add/" method="POST">
             @csrf
-            清單:<input type="text" name="video_list_id" size=20 required>
             標題:<input type="text" name="title" size=20 required>
             VID:<input type="text" name="vid" size=20 required>
-            <input type=submit value="加入">
+            <input type=submit value="加入"><hr>
         </form>
         @endauth
 
         <table class="table table-striped">
-            <tr><td>清單名稱</td><td>標題</td><td>VID</td>
+            <tr><td>標題</td><td>VID</td>
                 @auth
                 <td>管理</td></tr>
                 @endauth
             @foreach($data as $item)
             <tr>
-                <td>{{ $item->video_list_id }}</td>
                 <td><a href="/show/{{ $item->id }}/">{{ $item->title }}</a></td>
                 <td>{{ $item->vid }}</td>
                 @auth
