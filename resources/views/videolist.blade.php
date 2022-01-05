@@ -20,7 +20,7 @@
         </form>
         <hr>
 	@forelse ($videolist as $item)
-    	<li>{{ $item->name }}</li>
+    	<li><a href="/videolist/list/{{ $item->id }}">{{ $item->name }}</a></li>
 	@empty
     	<p>目前沒有影片清單</p>
 	@endforelse

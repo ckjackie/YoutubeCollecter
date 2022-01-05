@@ -55,6 +55,7 @@ Route::middleware(['auth'])->group(function () {
 
 //Resource 可把對應的CRUD方法都建起來
 Route::resource('videolist', VideoListController::class);
+Route::get('/videolist/list/{id}/', [VideoListController::class, 'list']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

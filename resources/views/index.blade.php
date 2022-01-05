@@ -21,8 +21,9 @@
         @auth
         <form action="/add/" method="POST">
             @csrf
+            清單:<input type="text" name="video_list_id" size=20 required>
+            標題:<input type="text" name="title" size=20 required>
             VID:<input type="text" name="vid" size=20 required>
-            清單:<input type="text" name="vid" size=20 required>
             <input type=submit value="加入">
         </form>
         @endauth

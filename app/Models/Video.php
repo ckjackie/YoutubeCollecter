@@ -9,8 +9,7 @@ class Video extends Model
 {
     use HasFactory;
 
-    //2021.12.29 Relationships
-    public function comments()
+    public function Comments()
     {
         return $this->hasMany('App\Comment');
     }

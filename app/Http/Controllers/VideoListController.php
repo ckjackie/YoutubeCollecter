@@ -54,10 +54,29 @@ class VideoListController extends Controller
      * @param  \App\Models\VideoList  $videoList
      * @return \Illuminate\Http\Response
      */
-    public function show(VideoList $videoList)
+    public function list($id)
     {
         //
+        $data = Videos::all();
+        $target = $data.video_list_id == $id;
+        //$id = $target->id;
+        //return view("list", compact("id"));
+        return view("list", compact("id"));
     }
+
+/*
+     public function index(){
+        $data = Video::all();
+        return view("list", compact("data"));
+    }
+
+    public function show($id){
+        //return "Your video id is $id!";
+        $target = Video::find($id);
+        $vid = $target->vid;
+        return view("show", compact("vid"));
+    }
+*/
 
     /**
      * Show the form for editing the specified resource.

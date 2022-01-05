@@ -14,13 +14,13 @@ class VideoList extends Model
         'user_id',
     ];
 
-    public function videos()
+    public function Videos()
     {
         return $this->hasMany('App\Video');
     }
 
     
-    public function videolists()
+    public function VideoLists()
     {
         return $this->belongsTo('App\User');
     }
